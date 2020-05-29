@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<contextName>C://Program Files//Apache Software Foundation//Tomcat 7.0//logs//vchatinterface_log//logs</contextName>
+	<!-- <contextName>E://dummy//voicechangerccinepal//logging//</contextName> -->
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>vchatinterface - %date [%thread] %-5level %logger{36} -
+				%message%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${CONTEXT_NAME}.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>${CONTEXT_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %logger -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- <logger name="org.springframework" level="WARN" /> <logger name="org.springframework.transaction" 
+		level="WARN" /> in order to debug some marshalling issues, this needs to 
+		be TRACE <logger name="org.springframework.web.servlet.mvc" level="WARN" 
+		/> -->
+
+	<logger name="com.spice" level="debug" additivity="false">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<root level="ERROR">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

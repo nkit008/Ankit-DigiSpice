@@ -1,0 +1,22 @@
+2019-12-11 11:03:49 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed Dec 11 11:03:49 IST 2019
+2019-12-11 11:03:50 INFO  NewsByteMis:106 - connection established
+2019-12-11 11:03:50 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20191201 to 20191210
+2019-12-11 11:03:50 ERROR GenratePoi:3774 - Error while executing GenrateXLS FIlejava.nio.file.NoSuchFileException: D:\Ankit's Workspace\NewsByteMis\News_Byte.xlsx
+java.nio.file.NoSuchFileException: D:\Ankit's Workspace\NewsByteMis\News_Byte.xlsx
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:99)
+	at sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:278)
+	at java.nio.file.Files.copy(Files.java:1227)
+	at com.newsbyte.mis.GenratePoi.genrateXLS(GenratePoi.java:3721)
+	at com.newsbyte.mis.NewsByteMis.downloadExcel(NewsByteMis.java:226)
+	at com.newsbyte.mis.NewsByteMis.main(NewsByteMis.java:41)
+2019-12-11 11:03:50 INFO  GenratePoi:3779 - Closing connection
+2019-12-11 11:03:50 INFO  NewsByteMis:231 - java.lang.NullPointerException
+2019-12-11 11:06:02 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed Dec 11 11:06:02 IST 2019
+2019-12-11 11:06:02 INFO  NewsByteMis:106 - connection established
+2019-12-11 11:06:02 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20191201 to 20191210
+2019-12-11 11:06:04 INFO  GenratePoi:3779 - Closing connection

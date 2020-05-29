@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+.barsz{font-size:28px !important; padding-top:15px; padding-left:27px; color:#FFF;}
+.faics{color: #ae020a !important;
+	font-size: 16px !important;
+	margin-right: 5px !important;
+	width: 2.5rem !important;
+	height: 2.5rem !important;
+	border-radius: 50%  ;
+	text-align: center;
+	line-height: 2.5rem !important;
+	font-size: 1rem !important;
+	background: #fff !important;
+	z-index:99 !important; 
+		
+	
+	}
+	
+	
+	.app-toggle{
+  display: block;
+  padding: 0 15px;
+    color: #e5cdf1;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}

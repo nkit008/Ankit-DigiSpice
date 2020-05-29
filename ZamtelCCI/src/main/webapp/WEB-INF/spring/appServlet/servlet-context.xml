@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+</bean>	
+	
+	<context:component-scan base-package="com.digispice.cci.zambia" />
+	
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:db.properties"/>
+	</bean>
+	
+	<!-- OR -->
+	<!-- <context:property-placeholder location="classpath:db.properties"/> -->
+	
+	<!-- Simple implementation of the standard JDBC DataSource interface, 
+        configuring the plain old JDBC DriverManager via bean properties -->
+        
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="${jdbc.driver}" />
+      <property name="url" value="${jdbc.url}" />
+      <property name="username" value="${jdbc.username}" />
+      <property name="password" value="${jdbc.password}" />
+   </bean>
+   
+   <!-- This produces a container-managed EntityManagerFactory; 
+         rather than application-managed EntityManagerFactory as in case of LocalEntityManagerFactoryBean-->
+         
+	<bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.digispice.cci.zambia.entity" />
+		
+		 <!-- JpaVendorAdapter implementation for Hibernate EntityManager.
+           Exposes Hibernate's persistence provider and EntityManager extension interface -->
+      <property name="jpaVendorAdapter">
+         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+      </property>
+      
+		<property name="jpaProperties">
+		<props>
+			<prop key="hibernate.hbm2ddl.auto">${jpa.hibernate.hbm2ddl.auto}</prop>
+			<prop key="hibernate.dialect">${jpa.hibernate.dialect}</prop>
+		</props>
+		</property>
+	</bean>
+	
+	
+	<!-- This transaction manager is appropriate for applications that use a single JPA EntityManagerFactory for transactional data access. 
+        JTA (usually through JtaTransactionManager) is necessary for accessing multiple transactional resources within the same transaction. -->
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+      <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
+   </bean>
+   
+<!--    	<bean id="dataSourceBeats" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="${jdbc.driver}" />
+      <property name="url" value="${jdbc.beats.url}" />
+      <property name="username" value="${jdbc.beats.username}" />
+      <property name="password" value="${jdbc.beats.password}" />
+   </bean>
+   
+   	<bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactoryBeanBeats">
+		<property name="dataSource" ref="dataSourceBeats" />
+		 <property name="packagesToScan" value="com.digispice" />
+		
+		 JpaVendorAdapter implementation for Hibernate EntityManager.
+           Exposes Hibernate's persistence provider and EntityManager extension interface
+      <property name="jpaVendorAdapter">
+         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+      </property>
+      
+		<property name="jpaProperties">
+		<props>
+			<prop key="hibernate.hbm2ddl.auto">update</prop>
+			<prop key="hibernate.dialect">${jpa.hibernate.dialect}</prop>
+		</props>
+		</property>
+	</bean>
+	
+	
+	<bean id="transactionManagerBeats" class="org.springframework.orm.jpa.JpaTransactionManager">
+      <property name="entityManagerFactory" ref="entityManagerFactoryBeanBeats" />
+   </bean> -->
+	
+	<!-- responsible for registering the necessary Spring components that power annotation-driven transaction management; 
+        such as when @Transactional methods are invoked -->
+   <tx:annotation-driven />
+	
+</beans>

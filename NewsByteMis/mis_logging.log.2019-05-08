@@ -1,0 +1,25 @@
+2019-05-08 11:06:22 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed May 08 11:06:22 IST 2019
+2019-05-08 11:06:24 INFO  NewsByteMis:106 - connection established
+2019-05-08 11:06:24 INFO  NewsByteMis:114 - fetching records from mis..TBL_MIS_NEWS_BYTE from 20190501 to 20190507
+2019-05-08 11:06:24 INFO  NewsByteMis:231 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.TBL_MIS_NEWS_BYTE where DATE_TIME BETWEEN '20190501' and '20190507'' at line 1
+2019-05-08 15:59:41 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed May 08 15:59:41 IST 2019
+2019-05-08 15:59:42 INFO  NewsByteMis:106 - connection established
+2019-05-08 15:59:42 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20190501 to 20190507
+2019-05-08 15:59:43 INFO  GenratePoi:3779 - Closing connection
+2019-05-08 16:00:20 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed May 08 16:00:20 IST 2019
+2019-05-08 16:00:20 INFO  NewsByteMis:106 - connection established
+2019-05-08 16:00:20 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20190501 to 20190507
+2019-05-08 16:00:22 INFO  GenratePoi:3779 - Closing connection
+2019-05-08 16:03:40 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed May 08 16:03:40 IST 2019
+2019-05-08 16:03:40 INFO  NewsByteMis:106 - connection established
+2019-05-08 16:03:40 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20190501 to 20190507
+2019-05-08 16:03:42 INFO  GenratePoi:3779 - Closing connection
+2019-05-08 16:05:00 INFO  NewsByteMis:30 - 
+Start Time of Program is Wed May 08 16:05:00 IST 2019
+2019-05-08 16:05:01 INFO  NewsByteMis:106 - connection established
+2019-05-08 16:05:01 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20190501 to 20190507
+2019-05-08 16:05:02 INFO  GenratePoi:3779 - Closing connection

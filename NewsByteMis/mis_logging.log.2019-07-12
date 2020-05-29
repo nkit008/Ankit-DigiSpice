@@ -1,0 +1,5 @@
+2019-07-12 12:38:24 INFO  NewsByteMis:30 - 
+Start Time of Program is Fri Jul 12 12:38:24 IST 2019
+2019-07-12 12:38:25 INFO  NewsByteMis:106 - connection established
+2019-07-12 12:38:25 INFO  NewsByteMis:114 - fetching records from tbl_mis_news_byte from 20190701 to 20190711
+2019-07-12 12:38:27 INFO  GenratePoi:3779 - Closing connection

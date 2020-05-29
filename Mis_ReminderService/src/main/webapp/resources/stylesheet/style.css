@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+.brd {
+	border-bottom:1px solid #000; padding: 5px 0px 5px 2px ; 
+}
+
+.logospc {
+	padding: 95px 0px 7px 0px;
+}
+
+.bord-top {
+	border-top: 1px solid #e5e5e5;
+}
+
+.bord-mid {
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+
+.f-txt {
+	color: #9b9b9b;
+	font-size: 13px;
+}
+
+.blue-txt {
+	color: #0878aa;
+}
+
+.field-bg {
+	background: url(../images/field-bg.jpg);
+	background-repeat: no-repeat;
+	width: 273px;
+	height: 31px;
+}
+
+.field-n {
+	width: 247px;
+	height: 14px;
+	border: 1px solid #FFFFFF;
+	margin-top: 5px;
+	margin-left: 12px;
+}
+
+.mid {
+	
+	width: 100%;
+	
+	
+	
+	background: #f3f3f2; /* Old browsers */
+
+background: -moz-linear-gradient(top, #f3f3f2 0%, #ffffff 49%, #ffffff 51%, #ffffff 100%); /* FF3.6-15 */
+
+background: -webkit-linear-gradient(top, #f3f3f2 0%,#ffffff 49%,#ffffff 51%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+
+background: linear-gradient(to bottom, #f3f3f2 0%,#ffffff 49%,#ffffff 51%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.spcr2 {
+	margin-left: 20px;
+}
+
+.to {
+	float: left;
+	width: 336px;
+}
+
+.from {
+	float: right;
+	width: 436px;
+}
+
+.export {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.export:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+#wrapper2 {
+	width: 1000px;
+	margin: 0px auto;
+	overflow: hidden;
+	padding-top: 137px;
+}
+
+#login-box {
+	width: 388px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.loginheader {
+	background: url(../images/corntop-mid.gif) top repeat-x;
+	overflow: hidden;
+}
+
+.loginmid {
+	border-left: 1px solid #dedada;
+	border-right: 1px solid #dedada;
+}
+
+.loginmid h1 {
+	
+}
+
+.loginbottom {
+	background: url(../images/conbot-mid.gif) top repeat-x;
+	overflow: hidden;
+}
+
+.login {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #02a5c4;
+	padding-top: 17px;
+	padding-left: 26px;
+}
+
+/* .table thead,tbody
+{
+  display: block; 
+}
+
+tbody {
+    height: 100px;       Just for the demo         
+    overflow-y: auto;    Trigger vertical scroll   
+    overflow-x: auto;  Hide the horizontal scroll
+    width: auto;
+} */

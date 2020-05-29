@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>afghanistankaraokemisintf</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.spice.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>com.spice.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeNRServlet</servlet-name>
+    <servlet-class>com.spice.servlet.HomeNRServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeNRServlet</servlet-name>
+    <url-pattern>/nightradio</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.spice.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>NightRadio</servlet-name>
+    <servlet-class>com.spice.servlet.NightRadio</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NightRadio</servlet-name>
+    <url-pattern>/Nradio</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>pagechange</servlet-name>
+    <servlet-class>com.spice.servlet.ChangeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>pagechange</servlet-name>
+    <url-pattern>/pageChange</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Shyarai</servlet-name>
+    <servlet-class>com.spice.servlet.ShayariServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Shyarai</servlet-name>
+    <url-pattern>/shayariPage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeShayari</servlet-name>
+    <servlet-class>com.spice.servlet.HomeShayariServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeShayari</servlet-name>
+    <url-pattern>/shayariAction</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+    <servlet>
+    <servlet-name>awccKaraokeDownload</servlet-name>
+    <servlet-class>com.spice.servlet.DownloadAwccKaraokeMIS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>awccKaraokeDownload</servlet-name>
+    <url-pattern>/DownloadAwccKaraokeMIS</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>appKaraokeDownload</servlet-name>
+    <servlet-class>com.spice.servlet.DownloadAppKaraokeMIS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>appKaraokeDownload</servlet-name>
+    <url-pattern>/DownloadAppKaraokeMIS</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>ussdIslamicDownload</servlet-name>
+    <servlet-class>com.spice.servlet.DownloadUssdIslamicMIS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ussdIslamicDownload</servlet-name>
+    <url-pattern>/DownloadUssdIslamicMIS</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ussdInfoDownload</servlet-name>
+    <servlet-class>com.spice.servlet.DownloadUssdInfoMIS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ussdInfoDownload</servlet-name>
+    <url-pattern>/DownloadUssdInfoMIS</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>nightRadioDownload</servlet-name>
+    <servlet-class>com.spice.servlet.DownloadNightRadioMIS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nightRadioDownload</servlet-name>
+    <url-pattern>/DownloadNightRadioMIS</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+    <servlet>
+    <servlet-name>shayariDownload</servlet-name>
+    <servlet-class>com.spice.servlet.DownloadShayariMIS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shayariDownload</servlet-name>
+    <url-pattern>/DownloadShayariMIS</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
